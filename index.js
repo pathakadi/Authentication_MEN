@@ -78,7 +78,7 @@ app.post("/register" , async(req ,res) => {
     
     user = await User.create({ name , email , password : hashedPassword });
 
-    const token = jwt.sign({_id : user._id} , "adibhai123");
+    const token = jwt.sign({_id : user._id} , "adityapathak");
     res.cookie("token" , token , {
         httpOnly : true ,
         expires : new Date(Date.now() + 60*1000)
