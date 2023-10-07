@@ -58,7 +58,7 @@ app.post("/login" , async(req , res) => {
     const message = "Incorrect Password" ;
     if(!isMatch) return res.render("login" , { email , message });
 
-    const token = jwt.sign({_id : user._id} , "adibhai123");
+    const token = jwt.sign({_id : user._id} , "adityapathak");
     res.cookie("token" , token , {
         httpOnly : true ,
         expires : new Date(Date.now() + 60*1000)
