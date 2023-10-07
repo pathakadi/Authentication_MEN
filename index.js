@@ -32,7 +32,7 @@ const isAuthenticated = async(req , res , next) => {
     const token = req.cookies.token;
 
     if(token){
-        const decoded = jwt.verify( token , "adibhai123");
+        const decoded = jwt.verify( token , "adityapathak");
         req.user = await User.findById(decoded._id);
         next();
     } else {
